@@ -44,7 +44,7 @@ const ProductList = () => {
  
 },[])*/
 
-let {products,error,isLoading,setProducts}=useFetch("http://json-server-backend-quaw.onrender.com/products")
+let {products,error,isLoading,setProducts}=useFetch("https://json-server-backend-quaw.onrender.com/products")
 
 
 let handleDelete=(id) =>{
