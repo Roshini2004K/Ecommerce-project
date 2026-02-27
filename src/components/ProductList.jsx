@@ -44,14 +44,14 @@ const ProductList = () => {
  
 },[])*/
 
-let {products,error,isLoading,setProducts}=useFetch("http://localhost:4000/products")
+let {products,error,isLoading,setProducts}=useFetch("http://json-server-backend-quaw.onrender.com/products")
 
 
 let handleDelete=(id) =>{
 
   console.log(id)
   
-    axios.delete(`http://localhost:4000/products/${id}`)
+    axios.delete(`https://json-server-backend-quaw.onrender.com/products/${id}`)
     .then(() =>{
       
      Swal.fire({

@@ -18,7 +18,7 @@ const UpdateProduct = () => {
   // ✅ GET PRODUCT BY ID
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/products/${id}`)
+      .get(`https://json-server-backend-quaw.onrender.com/products/${id}`)
       .then((res) => setUpdateProduct(res.data))
       .catch((err) => console.log(err));
   }, [id]);
@@ -50,7 +50,7 @@ const UpdateProduct = () => {
     e.preventDefault();
 
     axios
-      .put(`http://localhost:4000/products/${id}`, updateProduct)
+      .put(`https://json-server-backend-quaw.onrender.com/products/${id}`, updateProduct)
       .then(() => {
         alert("Product Updated Successfully");
         navigate("/products");
