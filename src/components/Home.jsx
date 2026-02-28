@@ -3,7 +3,7 @@ import useFetch from './custom-hook/useFetch'
 
 const Home = () => {
 
-  let { products } = useFetch("https://fakestoreapi.com/products")
+  let { products } = useFetch("https://json-server-backend-quaw.onrender.com/products")
 
   return (
     <div>
