@@ -49,7 +49,7 @@ const NewProduct = () => {
    let handleAdd=(e)=>{
     e.preventDefault()
 
-    fetch("http://json-server-backend-quaw.onrender.com/productsducts",{
+    fetch("https://json-server-backend-quaw.onrender.com/products",{
         method:"POST",
         headers:{
             "content-Type":"application/json"

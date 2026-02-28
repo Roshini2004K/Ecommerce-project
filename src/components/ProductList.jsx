@@ -17,32 +17,7 @@ import {addItem} from "../store/cartSlice"
 const ProductList = () => {
   let navigate=useNavigate()
 
-//let[products,setProducts] =useState([])
-//let[error,setError]=useState("")
-//let[isLoading,setIsLoading]=useState(true)
 
-
-/*useEffect(() => {
-  fetch("http://localhost:4000/products",{ method : "GET"})
-  .then((response) => {
-   if(response.ok){
-        return response.json()
-
-   }
-   else{
-    throw new Error("search proper data")
-   }
-  })
-  .then((data) => {setProducts(data)})
-  .catch((error) =>{
-    setError(error.message)
-
-  })
-  .finally(() => {
-    setIsLoading(false)
-  })
- 
-},[])*/
 
 let {products,error,isLoading,setProducts}=useFetch("https://json-server-backend-quaw.onrender.com/products")
 
