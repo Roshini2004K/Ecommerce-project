@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Navigate, useNavigate } from "react-router-dom";
 
 let renderCount = 0;
+
+
 
 
 let schema = Yup.object().shape({
@@ -52,6 +55,7 @@ const SignUp = () => {
   let handleData = (data) => {
     console.log(data);
   };
+  let navigate=useNavigate()
 
   return (
     <Paper
@@ -94,9 +98,9 @@ const SignUp = () => {
         error={!!errors.cPassword}
         helperText={errors.cPassword?.message}
       />
-      <Button variant="contained" type="submit">
-        {" "}
-        SignUp{" "}
+      <Button variant="contained" type="submit"  >
+        
+        SignUp
       </Button>
     </Paper>
   );

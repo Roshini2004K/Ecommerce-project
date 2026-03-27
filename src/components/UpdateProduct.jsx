@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
 
@@ -15,7 +16,7 @@ const UpdateProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // ✅ GET PRODUCT BY ID
+  // GET PRODUCT BY ID
   useEffect(() => {
     axios
       .get(`https://json-server-backend-quaw.onrender.com/products/${id}`)
@@ -23,7 +24,7 @@ const UpdateProduct = () => {
       .catch((err) => console.log(err));
   }, [id]);
 
-  // ✅ HANDLE CHANGE
+  //  HANDLE CHANGE
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -45,20 +46,24 @@ const UpdateProduct = () => {
     }
   };
 
-  // ✅ UPDATE (PUT)
+  //  UPDATE (PUT)
   const handleUpdate = (e) => {
     e.preventDefault();
 
     axios
       .put(`https://json-server-backend-quaw.onrender.com/products/${id}`, updateProduct)
       .then(() => {
-        alert("Product Updated Successfully");
+         Swal.fire({
+            title: "Success",
+            text: "Product updated successfully!",
+            icon: "success",
+             });
         navigate("/products");
       })
       .catch((err) => console.log(err));
   };
 
-  // ✅ LOADING
+  //  LOADING
   if (updateProduct!==null) {
     return (
     <div>
@@ -102,7 +107,7 @@ const UpdateProduct = () => {
 
             <Grid size={6}>
               <TextField
-                value={updateProduct.rating.category}
+                value={updateProduct.rating.count}
                 name="rating.count"
                 type="number"
                 label="Count"

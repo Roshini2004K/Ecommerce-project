@@ -43,10 +43,7 @@ const Wishlist = () => {
         <Card.Text >
          
         </Card.Text> 
-          <Button variant="primary" onClick={() =>addItemToCart(product)}>
-            <FaShoppingCart />
-
-          </Button>
+         
           <Button variant="danger"
            onClick={() =>handleDelete(product.id)}
           ><MdDelete />

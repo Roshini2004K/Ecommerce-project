@@ -9,6 +9,17 @@ const Login = () => {
     navigate("/")
 
   }
+   let style={
+    background:"#4096ed",
+    borderRadius:'5px',
+    cursor:"pointer",
+    fontSize:"16px",
+    alignItems:"center",
+    padding:"10px 10px"
+
+    
+   
+   }
 
 
 
@@ -16,7 +27,11 @@ const Login = () => {
   
   return (
     <div>Login - {newuser}
-    <button onClick ={handleNavigate}> Move to Home</button></div>
+    <span>
+          <button onClick ={handleNavigate} style={style}> Move to Home</button>
+
+    </span>
+    </div>
   )
 }
 

@@ -103,7 +103,7 @@ const NewProduct = () => {
 
                  </Grid>
                  <Grid size={6}>
-                  <TextField value={newProduct.rating.category}
+                  <TextField value={newProduct.rating.count}
                     name='rating.count' 
                     type="number"
                     label="Count"
